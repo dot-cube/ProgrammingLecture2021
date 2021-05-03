@@ -1,0 +1,25 @@
+name: Auto update index.html
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          ref: master
+
+      - name: update
+        run: ls | grep -Ev '.*\.((html)|(md)|(git)|(github))' | xargs -L1 -I{} sed -i -e 's/^\s*<!---->$/\0\n    <p><a href="{}\/index.html">{}<\/a><\/p>/g' index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: public
+          PUBLISH_DIR: ./
