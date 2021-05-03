@@ -43,4 +43,25 @@ Gitで管理しないファイルを指定するための設定ファイルで�
 [https://dot-cube.github.io/ProgrammingLecture2021/](https://dot-cube.github.io/ProgrammingLecture2021/)
 にアクセスした際に表示されるファイルです。htmlというマークアップ言語で記述しています。
 
-参考：[HTML: HyperText Markup Language](https://developer.mozilla.org/ja/docs/Web/HTML)
+参考：[HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/ja/docs/Web/HTML)
+
+
+## 手順書（部員向け）
+
+
+## チャレンジ問題（部員向け）
+Git体験講座の内容だけでは物足りない人向けです。
+
+### 難易度：低
+- [https://dot-cube.github.io/ProgrammingLecture2021/](https://dot-cube.github.io/ProgrammingLecture2021/)
+の文章をより詳しく書いて、GitHubに反映する。
+- ローカルリポジトリで間違った変更をCommitした後、当該Commitを取り消す。
+
+### 難易度：中
+- CSSを使って[https://dot-cube.github.io/ProgrammingLecture2021/](https://dot-cube.github.io/ProgrammingLecture2021/)
+の見た目をきれいにする。
+
+### 難易度：高
+- GitHub Actions を使って[https://dot-cube.github.io/ProgrammingLecture2021/](https://dot-cube.github.io/ProgrammingLecture2021/)
+の情報を更新する。
+
