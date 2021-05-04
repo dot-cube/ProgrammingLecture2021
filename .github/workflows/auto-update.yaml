@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-deploy:
+  auto-update:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -14,7 +14,7 @@ jobs:
         with:
           ref: master
 
-      - name: update
+      - name: Update
         run: ls | grep -Ev '.*\.((html)|(md)|(git)|(github))' | xargs -L1 -I{} sed -i -e 's/^\s*<!---->$/\0\n    <p><a href="{}\/index.html">{}<\/a><\/p>/g' index.html
 
       - name: Deploy
