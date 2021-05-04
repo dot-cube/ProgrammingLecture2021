@@ -1,4 +1,5 @@
 # ProgrammingLecture2021
+[![Auto update index.html](https://github.com/dot-cube/ProgrammingLecture2021/actions/workflows/auto-update.yaml/badge.svg)](https://github.com/dot-cube/ProgrammingLecture2021/actions/workflows/auto-update.yaml)
 
 ## これは何？
 dot cube の新歓イベント「プログラミング体験講座」に参加してくれた、新入部員の成果物を公開するためのリポジトリです。
