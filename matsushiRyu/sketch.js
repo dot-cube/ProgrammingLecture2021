@@ -72,7 +72,6 @@ function draw() {
   player.v.y = (player.v.y + mouseY-player.p.y)/5;
   player.p = player.p.add(player.v);
   
-  keyboard();
   
   //キーボード入力
   keyboard();
