@@ -1,7 +1,12 @@
 html, body {
   margin: 0;
   padding: 0;
+  /* 中央に揃える */
+  text-align: center;
+  /* 色変える */
+  background: rgb(50,155,115);
 }
 canvas {
-  display: block;
+  /*display: block;*/
+  border: 30px;
 }
