@@ -1,26 +1,34 @@
-var clearButton;
-function setup() {
-  clearButton = createButton('Clear');
-  clearButton.mousePressed(reset);
-  
-  createCanvas(windowWidth, windowHeight-clearButton.size().height);
-  
-  setUpCanvas();
-}
-
-function draw() {
-  if(mouseIsPressed){
-    line(pmouseX, pmouseY, mouseX, mouseY);
+let leftSketch = function (p) {
+  p.setup = function () {
+    p.createCanvas(p.windowWidth/2, p.windowHeight);
+    setUpCanvas(p);
   }
-}
+  p.draw = function () {
+    if (p.mouseIsPressed) {
+      p.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
+    }
+  }
+};
 
-function setUpCanvas() {
-  background(255);
-  
-  rect(0, 0, windowWidth, windowHeight-clearButton.size().height);
-}
+let rightSketch = function (p) {
+  p.setup = function () {
+    p.createCanvas(p.windowWidth/2, p.windowHeight);
+    //p.position(leftSketch.size().width,0);
+    setUpCanvas(p);
+  }
+  p.draw = function () {
+    if (p.mouseIsPressed) {
+      p.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
+    }
+  }
+};
 
-function reset() {
-  clear();
-  setUpCanvas();
-}
+function setUpCanvas(p) {
+  p.background(0);
+
+  p.rect(0, 0, p.windowWidth/2, p.windowHeight);
+};
+
+
+new p5(leftSketch, 'left_container');
+new p5(rightSketch, 'right_container');
