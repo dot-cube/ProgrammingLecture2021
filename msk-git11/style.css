@@ -4,4 +4,5 @@ html, body {
 }
 canvas {
   display: block;
+  border: rgba(9, 214, 60, 0.897);
 }
